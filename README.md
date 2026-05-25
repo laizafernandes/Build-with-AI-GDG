@@ -62,6 +62,42 @@ source .venv/bin/activate
 python -c "from my_agent.agent import root_agent; print(root_agent.description)"
 ```
 
+### Interface web do agente
+
+Uma interface web simples foi adicionada ao projeto em `app.py`.
+
+1. Ative o ambiente virtual:
+
+```bash
+source .venv/bin/activate
+```
+
+2. Instale dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Defina sua chave de API do Google Gemini:
+
+```bash
+export GOOGLE_API_KEY="sua_chave_aqui"
+```
+
+4. Execute o servidor web:
+
+```bash
+uvicorn app:app --reload --host 127.0.0.1 --port 8000
+```
+
+5. Abra no navegador:
+
+```text
+http://127.0.0.1:8000
+```
+
+A interface permite enviar perguntas diretamente para o agente e receber respostas em texto.
+
 A partir daqui, você pode expandir o projeto para processar solicitações do usuário, integrar com APIs externas e construir fluxos de trabalho de assistente AI.
 
 ## Boas Práticas
